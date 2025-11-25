@@ -1,0 +1,87 @@
+.withdrawal-wrapper {
+    margin-top: 0.7rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed rgba(148, 163, 184, 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+}
+
+.withdrawal-label {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.withdrawal-input {
+    width: 100%;
+    padding: 0.6rem 0.85rem;
+    border-radius: 0.8rem;
+    border: 1px solid rgba(148, 163, 184, 0.5);
+    background: #020617;
+    color: var(--text);
+    outline: none;
+    font-size: 0.85rem;
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.08s ease;
+}
+
+.withdrawal-input::placeholder {
+    color: rgba(148, 163, 184, 0.7);
+}
+
+.withdrawal-input:focus {
+    border-color: var(--accent-purple);
+    box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.5);
+    transform: translateY(-1px);
+}
+
+.withdrawal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.2rem;
+}
+
+.get-money {
+    padding: 0.55rem 1.3rem;
+    border-radius: 999px;
+    border: none;
+    background: radial-gradient(circle at top, #fb923c, #e11d48);
+    color: #1b1020;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 12px 28px rgba(248, 113, 113, 0.55);
+    transition:
+        transform 0.12s ease,
+        box-shadow 0.12s ease,
+        filter 0.12s ease,
+        opacity 0.12s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.get-money:hover:not(:disabled) {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow: 0 16px 36px rgba(248, 113, 113, 0.7);
+}
+
+.get-money:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(248, 113, 113, 0.5);
+}
+
+.get-money:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+@media (max-width: 480px) {
+    .get-money {
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,112 @@
+.form-card {
+    background: radial-gradient(circle at top left, #111827 0, #020617 55%);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(31, 41, 55, 0.9);
+    padding: 1.1rem 1rem 0.9rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+}
+
+.form-title {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form-label {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+.token-value-input {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.45);
+    background: #020617;
+    color: var(--text);
+    outline: none;
+    font-size: 0.9rem;
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease,
+        transform 0.08s ease;
+}
+
+.token-value-input::placeholder {
+    color: rgba(148, 163, 184, 0.7);
+}
+
+.token-value-input:focus {
+    border-color: var(--accent-teal);
+    box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.4);
+    transform: translateY(-1px);
+}
+
+.token-value-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.3rem;
+}
+
+.form-submit-btn {
+    padding: 0.65rem 1.4rem;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(120deg, var(--accent-purple), var(--accent-teal));
+    color: #020617;
+    font-weight: 600;
+    font-size: 0.88rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    box-shadow: 0 12px 30px rgba(59, 130, 246, 0.55);
+    transition:
+        transform 0.12s ease,
+        box-shadow 0.12s ease,
+        filter 0.12s ease,
+        opacity 0.12s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.form-submit-btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow: 0 16px 40px rgba(59, 130, 246, 0.7);
+}
+
+.form-submit-btn:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 8px 18px rgba(59, 130, 246, 0.5);
+}
+
+.form-submit-btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* мобилка */
+
+@media (max-width: 480px) {
+    .form-card {
+        padding: 1rem 0.9rem 0.85rem;
+    }
+}
